@@ -134,7 +134,7 @@ class Banner extends Base\OpenRtbObject
      * Ad position.
      * 
      * Please check the class constants specific to the ad positions.
-     * Please refer to http://www.iab.net/media/file/OpenRTBAPISpecificationVersion2_2.pdf in Table 6.5
+     * Please refer to http://www.iab.net/media/file/OpenRTBAPISpecificationVersion2_2.pdf in Table 6.5 for details.
      * 
      * @var     int
      * @field   pos
@@ -186,7 +186,7 @@ class Banner extends Base\OpenRtbObject
      * Specify properties for an expandable ad.
      * 
      * Please check the class constants specific to the expandable direction.
-     * Please refer to http://www.iab.net/media/file/OpenRTBAPISpecificationVersion2_2.pdf in Table 6.11
+     * Please refer to http://www.iab.net/media/file/OpenRTBAPISpecificationVersion2_2.pdf in Table 6.11 for details.
      * 
      * @var     int[]
      * @field   expdir
@@ -199,7 +199,7 @@ class Banner extends Base\OpenRtbObject
      * supported.
      * 
      * Please check the class constants specific to the API types.
-     * Please refer to http://www.iab.net/media/file/OpenRTBAPISpecificationVersion2_2.pdf in Table 6.4
+     * Please refer to http://www.iab.net/media/file/OpenRTBAPISpecificationVersion2_2.pdf in Table 6.4 for details.
      * 
      * @var     int[]
      * @field   api
@@ -207,4 +207,284 @@ class Banner extends Base\OpenRtbObject
      */
     private $apiFrameworks;
     
+    /**
+     * Returns the width of the impression in pixel.
+     * 
+     * @return int
+     */
+    function getWidth()
+    {
+        return $this->width;
+    }
+    
+    /**
+     * Sets the width of the impression in pixel.
+     * 
+     * @param int $width
+     */
+    function setWidth($width)
+    {
+        $this->width = $width;
+    }
+
+    /**
+     * Returns the height of the impression in pixel.
+     * 
+     * @return int
+     */
+    function getHeight()
+    {
+        return $this->height;
+    }
+
+    /**
+     * Sets the height of the impression in pixel.
+     * 
+     * @param int $height
+     */
+    function setHeight($height)
+    {
+        $this->height = $height;
+    }
+
+    /**
+     * Returns the maximum width of the impression in pixel.
+     * 
+     * @return int
+     */
+    function getMaxWidth()
+    {
+        return $this->maxWidth;
+    }
+
+    /**
+     * Sets the maximum width of the impression in pixel.
+     * 
+     * @param int $maxWidth
+     */
+    function setMaxWidth($maxWidth)
+    {
+        $this->maxWidth = $maxWidth;
+    }
+
+    /**
+     * Returns the maximum height of the impression in pixel.
+     * 
+     * @return int
+     */
+    function getMaxHeight()
+    {
+        return $this->maxHeight;
+    }
+
+    /**
+     * Sets the maximum height of the impression in pixel.
+     * 
+     * @param int $maxHeight
+     */
+    function setMaxHeight($maxHeight)
+    {
+        $this->maxHeight = $maxHeight;
+    }
+
+    /**
+     * Returns the minimum width of the impression in pixel.
+     * 
+     * @return int
+     */
+    function getMinWidth()
+    {
+        return $this->minWidth;
+    }
+
+    /**
+     * Sets the minimum width of the impression in pixel.
+     * 
+     * @param int $minWidth
+     */
+    function setMinWidth($minWidth)
+    {
+        $this->minWidth = $minWidth;
+    }
+
+    /**
+     * Returns the minimum height of the impression in pixel.
+     * 
+     * @return int
+     */
+    function getMinHeight()
+    {
+        return $this->minHeight;
+    }
+
+    /**
+     * Sets the minimum height of the impression in pixel.
+     * 
+     * @param int $minHeight
+     */
+    function setMinHeight($minHeight)
+    {
+        $this->minHeight = $minHeight;
+    }
+
+    /**
+     * Returns the unique identifier of the banner object.
+     * 
+     * @return string
+     */
+    function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Sets the unique identifier of the banner object.
+     * 
+     * @param string $id
+     */
+    function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * Returns the ad position.
+     * 
+     * @return int
+     */
+    function getAdPosition()
+    {
+        return $this->adPosition;
+    }
+
+    /**
+     * Sets the ad position.
+     * 
+     * @param int $adPosition
+     */
+    function setAdPosition($adPosition)
+    {
+        $this->adPosition = $adPosition;
+    }
+
+    /**
+     * Returns the blocked creative types.
+     * 
+     * @return string[]
+     */
+    function getBlockedCreativeTypes()
+    {
+        return $this->blockedCreativeTypes;
+    }
+
+    /**
+     * Sets the blocked creative types.
+     * 
+     * @param string[] $blockedCreativeTypes
+     */
+    function setBlockedCreativeTypes($blockedCreativeTypes)
+    {
+        $this->blockedCreativeTypes = $blockedCreativeTypes;
+    }
+    
+    /**
+     * Returns the blocked creative attributes.
+     * 
+     * @return string[]
+     */
+    function getBlockedCreativeAttributes()
+    {
+        return $this->blockedCreativeAttributes;
+    }
+
+    /**
+     * Sets the blocked creative attributes.
+     * 
+     * @param string[] $blockedCreativeAttributes
+     */
+    function setBlockedCreativeAttributes($blockedCreativeAttributes)
+    {
+        $this->blockedCreativeAttributes = $blockedCreativeAttributes;
+    }
+
+    /**
+     * Returns the supported content MIME types.
+     * 
+     * @return string[]
+     */
+    function getMimes()
+    {
+        return $this->mimes;
+    }
+
+    /**
+     * Sets the supported content MIME types.
+     * 
+     * @param string[] $mimes
+     */
+    function setMimes($mimes)
+    {
+        $this->mimes = $mimes;
+    }
+
+    /**
+     * Returns the delivery of the banner either in the top frame or in an iframe.
+     * 
+     * @return int
+     */
+    function getTopFrame()
+    {
+        return $this->topFrame;
+    }
+
+    /**
+     * Sets the delivery of the banner either in the top frame or in an iframe.
+     * 
+     * @param int $topFrame
+     */
+    function setTopFrame($topFrame)
+    {
+        $this->topFrame = $topFrame;
+    }
+
+    /**
+     * Returns the properties for an expandable ad.
+     * 
+     * @return int[]
+     */
+    function getExpandableDirections()
+    {
+        return $this->expandableDirections;
+    }
+
+    /**
+     * Sets the properties for an expandable ad.
+     * 
+     * @param int[] $expandableDirections
+     */
+    function setExpandableDirections($expandableDirections)
+    {
+        $this->expandableDirections = $expandableDirections;
+    }
+
+    /**
+     * Returns the list of supported API frameworks for this banner.
+     * 
+     * @return int[]
+     */
+    function getApiFrameworks()
+    {
+        return $this->apiFrameworks;
+    }
+
+    /**
+     * Sets the list of supported API frameworks for this banner.
+     * 
+     * @param int[] $apiFrameworks
+     */
+    function setApiFrameworks($apiFrameworks)
+    {
+        $this->apiFrameworks = $apiFrameworks;
+    }
+
 }
